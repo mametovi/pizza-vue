@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.block-wrap {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  padding: 50px 0;
+  box-shadow: 0px 0px 30px rgba(124, 124, 124, 0.692);
+  overflow: hidden;
+}
+
+
+.block-img {
+  margin: 0 auto;
+  position: relative;
+  transition: ease 0.7s;
+  animation-name: wiggle;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(1, -2.32, 0, 1.72);
+
+  img {
+    width: 100%;
+    transition: ease 0.5s;
+    opacity: 0;
+
+  }
+
+  img.pizza {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    transition-timing-function: cubic-bezier(1, -2.32, 0, 1.72);
+  }
+
+}
+
+
+@keyframes wiggle {
+  0% {
+    position: relative;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(1, -2.232, 0, 1.272);
+    background: #000;
+  }
+
+  25% {
+    animation-timing-function: cubic-bezier(1, -2.32, 0, 1.72);
+    transition-duration: 0.3s;
+    background: rgb(245, 3, 3);
+  }
+
+  50% {
+    animation-timing-function: cubic-bezier(1, -2.32, 0, 1.72);
+    transition-duration: 0.5s;
+    background: rgba(140, 0, 255, 0.247);
+  }
+
+  75% {
+    transition-timing-function: cubic-bezier(1, -2.32, 0, 1.72);
+    transition-duration: 0.6s;
+  }
+
+  100% {
+    transition-timing-function: cubic-bezier(1, -2.32, 0, 1.72);
+    transition-duration: 0.8s;
+  }
+}
+
+.size {
+  &-s {
+    width: 200px;
+    position: relative;
+
+    img {
+      transform: rotate(0);
+    }
+  }
+
+  &-m {
+    width: 250px;
+
+    img {
+      transform: rotate(1461deg);
+    }
+  }
+
+  &-l {
+    width: 300px;
+
+    img {
+      transform: rotate(720deg);
+    }
+  }
+}
+
+
+
+
+.text-center {
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-size: 27px;
+  font-weight: 700;
+
+  .bsk {
+    font-size: 28px;
+    margin-right: 3px;
+    font-weight: 700;
+  }
+
+
+}
+
+
+.block-link {
+  font-family: 'Ubuntu', sans-serif;
+
+  button.btn {
+    font-size: 15px;
+    font-weight: 400;
+    color: #aaa8a8eb;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 12px #268fff00;
+    margin-right: 10px;
+    border-radius: 50%;
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    color: #000 !important;
+    box-shadow: 0 0 14px #8f8f8f4d;
+    border-radius: 50%;
+
+  }
+
+
+
+  button.btn.btn-primary {
+    box-shadow: 0 0 14px #8f8f8f4d;
+    border-radius: 50%;
+
+  }
+
+  .btn-primary:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 0px #268fff00;
+  }
+}
+
+.block-link button.btn:nth-child(0) {
+  margin-right: 0;
+}
+
+.block-item {
+  box-shadow: 0 0 22px #93919175;
+  border-radius: 50%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #e6dbc7c2;
+  cursor: pointer;
+  z-index: 2;
+
+  img {
+    width: 100%;
+  }
+
+  &:nth-child(7) {
+    margin-right: 0;
+  }
+}
+
+.block-icon__item {
+  margin-top: 40px;
+}
+
+
+
+.ps-basket {
+  position: absolute;
+  bottom: -29px;
+  background: #f7a300cf;
+  width: 7%;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+
+.block {
+  position: relative;
+}
+
+
+.block-item.actived {
+  border: 0.2px solid red;
+}
+
+
+.block-img.size-m.gribi {
+  position: relative;
+
+
+
+}
+
+.block-img {
+  position: relative;
+}
+
+.ingridient-img img {}
+
+.ingridient-item__moshrous,
+.ingridient-item__olivki,
+.ingridient-item__gor,
+.ingridient-item__car,
+.ingridient-item__pi,
+.ingridient-item__og,
+.ingridient-item__peper {
+  opacity: 0;
+  z-index: -1;
+}
+
+.block-img.gribi .ingridient-item__moshrous,
+.block-img.cream .ingridient-item__olivki,
+.block-img.bow .ingridient-item__pi,
+.block-img.cucumbers .ingridient-item__og,
+.block-img.peas .ingridient-item__gor,
+.block-img.potatoes .ingridient-item__car,
+.block-img.peper .ingridient-item__peper {
+  opacity: 1;
+
+}
+
+.block-img__wrap {
+  height: 300px;
+
+}
+
+
+
+.block-img.size-s .text-center {
+  transition: all 23s;
+  transform: rotate(1260deg);
+}
+
+
+.phone-enter-active,
+.phone-leave-active {}
+
+
+.phone-enter,
+.phone-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+
+.ingridient-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .ingridient-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+
+    .ingridient-part {
+      position: absolute;
+
+      &-1 {
+        top: 100px;
+        left: 200px;
+        right: 200px;
+        bottom: 200px;
+      }
+
+      &-2 {
+        left: 100px;
+      }
+
+      &-3 {
+        bottom: 100px;
+      }
+
+      &-4 {
+        right: 100px;
+      }
+    }
+  }
+}
+
+.block-img {
+
+  &.moshrous {
+
+    .ingridient-item {
+      &-moshrous {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+
+        img {
+          opacity: 1;
+          transition: ease 0.4s;
+        }
+      }
+
+      
+    }
+
+
+  }
+
+  &.olivki {
+    .ingridient-item {
+      &-olivki {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+        img {
+          opacity: 1;
+          transition: ease 0.4s;
+        }
+      }
+
+    }
+  }
+
+
+  &.pi {
+    .ingridient-item {
+      &-pi {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+        img {
+          opacity: 1;
+          transition: ease 0.4s;
+        }
+      }
+
+     
+    }
+  }
+
+  &.og {
+    .ingridient-item {
+      &-og {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+        img {
+          opacity: 1;
+          transition: ease 0.4s;
+        }
+      }
+    }
+  }
+
+
+  &.gor {
+    .ingridient-item {
+      &-gor {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+
+        img {
+          opacity: 1;
+          transition: ease 0.4s;
+        }
+      }
+    }
+  }
+
+  &.car {
+    .ingridient-item {
+      &-car {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+
+        img {
+          opacity: 1;
+          transition: ease 0.4s;
+        }
+      }
+    }
+
+  }
+
+  &.peper {
+    .ingridient-item {
+      &-peper {
+        visibility: visible;
+
+        .ingridient-part {
+          &-1 {
+            visibility: visible;
+            left: 0;
+            top: 0;
+          }
+
+          &-2 {
+            left: 0;
+          }
+
+          &-3 {
+            bottom: 0;
+          }
+
+          &-4 {
+            right: 0;
+          }
+
+        }
+
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.block-img.gribi {
+  .ingridient-item {
+
+    .ingridient-part {
+      position: absolute;
+
+      &-1 {}
+    }
+
+    &-1 {}
+  }
+}
